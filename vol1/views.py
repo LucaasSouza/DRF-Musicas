@@ -1,11 +1,23 @@
-from .models import Bandas, Artistas, Musicas
-from .serializers import BandasSerializer, ArtistasSerializer, MusicasSerializer
+from .models import Artistas, Bandas, InstrumentosMusicais, GenerosMusicais ,Musicas
+from .serializers import ArtistasSerializer, BandasSerializer, InstrumentosMusicaisSerializer, GenerosMusicaisSerializer, MusicasSerializer
 from rest_framework import viewsets
+
+# Viewset dos artistas
+class InstrumentosMusicaisViewSet(viewsets.ModelViewSet):
+    queryset = InstrumentosMusicais.objects.all()
+    serializer_class = InstrumentosMusicaisSerializer
+
 
 # Viewset dos artistas
 class ArtistasViewSet(viewsets.ModelViewSet):
     queryset = Artistas.objects.all()
     serializer_class = ArtistasSerializer
+
+
+# Viewset dos artistas
+class GenerosMusicaisViewSet(viewsets.ModelViewSet):
+    queryset = GenerosMusicais.objects.all()
+    serializer_class = GenerosMusicaisSerializer
 
 
 # Viewset das bandas
