@@ -1,6 +1,6 @@
 from django.db import models
 
-# Tabela dos instrumentos musicais
+# Tabela dos instrumentos-musicais
 class InstrumentosMusicais(models.Model):
     codIns = models.CharField(primary_key=True, max_length=3, blank=False, null=False)
     nomIns = models.CharField(max_length=250, blank=False, null=False)
